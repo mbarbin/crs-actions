@@ -1,0 +1,20 @@
+name: "setup-crs"
+description: "Download and set up the crs code review tool executable from a GitHub release."
+author: "crs contributors"
+inputs:
+  crs_version:
+    description: "crs version to install."
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Install crs
+      shell: sh
+      run: |
+        "${{ github.action_path }}/install.sh"
+      env:
+        CRS_VERSION: ${{ inputs.crs_version }}
+        GH_TOKEN: ${{ github.token }}
+branding:
+  icon: "terminal"
+  color: "blue"
