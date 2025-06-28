@@ -32,3 +32,31 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+---
+
+## crs (Code Review System)
+
+- Repository: https://github.com/mbarbin/crs
+- License: LGPL-3.0-or-later WITH LGPL-3.0-linking-exception
+
+The `crs-actions` project uses the `crs` tool as an external binary. The action does not include, modify, or distribute the source code of `crs`, but only invokes its executable as required. The `crs` project is licensed under LGPL-3.0-or-later WITH LGPL-3.0-linking-exception, which explicitly permits use of the binary by other software, including software under a different license (such as MIT). Therefore, it is compatible and appropriate to use the `crs` binary in this MIT-licensed action repository. Users are encouraged to consult the `crs` project and its license for more details.
+
+```text
+crs - A tool for managing code review comments embedded in source code
+Copyright (C) 2024-2025 Mathieu Barbin <mathieu.barbin@gmail.com>
+
+crs is free software; you can redistribute it and/or modify it under the
+terms of the GNU Lesser General Public License as published by the Free
+Software Foundation either version 3 of the License, or any later version,
+with the LGPL-3.0 Linking Exception.
+
+crs is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License and
+the file `NOTICE.md` at the root of this repository for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+and the LGPL-3.0 Linking Exception along with this library. If not, see
+<http://www.gnu.org/licenses/> and <https://spdx.org>, respectively.
+```
