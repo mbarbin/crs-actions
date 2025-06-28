@@ -5,7 +5,7 @@ A reusable GitHub Action to comment on CRs in a pull request using reviewdog.
 ## Usage
 
 ```yaml
-- uses: mbarbin/crs-actions/main/comment-crs-in-pr@<ref>
+- uses: mbarbin/crs-actions/comment-crs-in-pr@<ref>
   with:
     crs_config: .github/crs-config.json
 ```

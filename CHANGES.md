@@ -1,3 +1,9 @@
+## 1.0.0-alpha.3 (unreleased)
+
+### Fixed
+
+- Fixed invalid action path in `comment-crs-in-pr` README (#3, @mbarbin).
+
 ## 1.0.0-alpha.2 (2025-06-28)
 
 ### Added
