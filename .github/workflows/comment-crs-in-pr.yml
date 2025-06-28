@@ -4,7 +4,10 @@ on:
   pull_request:
     branches: [main]
 
+# CR mbarbin: Currently failing due to lack of read access. Will try with the
+# read permission set explicitly.
 permissions:
+  contents: read
   pull-requests: write
 
 jobs:
