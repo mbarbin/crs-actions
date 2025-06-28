@@ -1,0 +1,28 @@
+name: "comment-crs-in-pr"
+description: "Comment on CRs in a pull request using reviewdog."
+author: "crs contributors"
+inputs:
+  crs_config:
+    description: "Path to the crs config file."
+    required: false
+    default: ".github/crs-config.json"
+  with_user_mentions:
+    description: "Whether to mention users in comments. If set to 'true', the action will enable the user mention whitelist as configured in the crs config file (defaults to no users)."
+    required: false
+    default: "true"
+runs:
+  using: "composite"
+  steps:
+    - name: Comment on CRs in PR
+      if: github.event_name == 'pull_request'
+      shell: sh
+      run: |
+        "${{ github.action_path }}/comment-crs-in-pr.sh"
+      env:
+        CRS_CONFIG: ${{ inputs.crs_config }}
+        WITH_USER_MENTIONS: ${{ inputs.with_user_mentions }}
+        PULL_REQUEST_AUTHOR: ${{ github.event.pull_request.user.login }}
+        REVIEWDOG_GITHUB_API_TOKEN: ${{ github.token }}
+branding:
+  icon: "git-pull-request"
+  color: "green"
