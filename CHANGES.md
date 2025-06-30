@@ -1,5 +1,9 @@
 ## 1.0.0-alpha.3 (unreleased)
 
+### Changed
+
+- Switch to use `sh` in scripts (#6, @mbarbin).
+
 ### Fixed
 
 - Fixed invalid action path in `comment-crs-in-pr` README (#3, @mbarbin).

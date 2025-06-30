@@ -1,13 +1,20 @@
-#!/usr/bin/env sh
+#!/bin/sh
 set -eu
 
 CRS_CONFIG="${CRS_CONFIG:-.github/crs-config.json}"
 WITH_USER_MENTIONS="${WITH_USER_MENTIONS:-true}"
 PULL_REQUEST_AUTHOR="${PULL_REQUEST_AUTHOR:?PULL_REQUEST_AUTHOR is required}"
 
+TMPFILE=$(mktemp)
+trap 'rm -f "$TMPFILE"' EXIT
+
 crs tools reviewdog annotate-crs \
   --config="$CRS_CONFIG" \
   --review-mode=pull-request \
   --with-user-mentions="$WITH_USER_MENTIONS" \
   --pull-request-author="$PULL_REQUEST_AUTHOR" \
-| reviewdog -f=rdjson -name="crs" -reporter=github-pr-review
+  > "$TMPFILE"
+status=$?
+reviewdog -f=rdjson -name="crs" -reporter=github-pr-review < "$TMPFILE"
+rm -f "$TMPFILE"
+exit $status
