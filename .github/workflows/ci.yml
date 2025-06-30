@@ -19,7 +19,7 @@ jobs:
       - name: Lint shell scripts with shellcheck
         run: |
           sudo apt-get update && sudo apt-get install -y shellcheck
-          find . -type f -name '*.sh' -exec shellcheck --format=tty {} +
+          find . -type f -name '*.sh' -exec shellcheck --shell=sh --format=tty {} +
 
       - name: Test local test script
         run: |

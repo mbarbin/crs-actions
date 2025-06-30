@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/bin/sh
+set -eu
 
 if [ -z "${CRS_VERSION:-}" ]; then
   echo "Error: CRS_VERSION environment variable must be set to a specific version (e.g., 0.0.20250626)." >&2

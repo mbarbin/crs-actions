@@ -1,5 +1,5 @@
-#!/usr/bin/env bash
-set -euo pipefail
+#!/bin/sh
+set -eu
 
 # Usage: ./test-install.sh <version>
 if [ $# -ne 1 ]; then
@@ -20,7 +20,7 @@ export GITHUB_PATH="$FAKE_TMPDIR/github_path.txt"
 rm -f "$FAKE_TMPDIR/crs/bin/crs"
 
 # Run the install script
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 "$SCRIPT_DIR/install.sh"
 
 # Check if the binary was installed
