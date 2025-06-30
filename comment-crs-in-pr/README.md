@@ -7,7 +7,7 @@ A reusable GitHub Action to comment on CRs in a pull request using reviewdog.
 ```yaml
 - uses: mbarbin/crs-actions/comment-crs-in-pr@<ref>
   with:
-    crs_config: .github/crs-config.json
+    crs-config: .github/crs-config.json
 ```
 
 - Requires the `crs` and `reviewdog` executables to be available in the PATH.
@@ -45,13 +45,13 @@ jobs:
       - name: Install crs
         uses: mbarbin/crs-actions/setup-crs@v1
         with:
-          crs_version: 0.0.20250626
+          crs-version: 0.0.20250626
       - name: Install reviewdog
         uses: reviewdog/action-setup@v1
       - name: Comment on CRs in PR
         uses: mbarbin/crs-actions/comment-crs-in-pr@v1
         with:
-          crs_config: .github/crs-config.json
+          crs-config: .github/crs-config.json
 ```
 
 ### Example crs-config.json
@@ -68,17 +68,17 @@ Currently expected to be a json5 file to save in the repo. For example:
 }
 ```
 
-You can save it at `.github/crs-config.json` or specify a custom path with `crs_config` in your workflow.
+You can save it at `.github/crs-config.json` or specify a custom path with the `crs-config` input in your workflow.
 
 ### User Mentions
 
-With `with_user_mentions: true`, the action is enabled to include `@user` mentions in PR review comments for CRs assigned to users.
+With `with-user-mentions: true`, the action is enabled to include `@user` mentions in PR review comments for CRs assigned to users.
 
 **Note:**
 
 - For user mentions to be effective, each user must be added to a whitelist in the crs config file to enable notifications for them.
 - This is a two-step process:
-  1. Enable user mentions in this action (set `with_user_mentions: true`). This is enabled by default.
+  1. Enable user mentions in this action (set `with-user-mentions: true`). This is enabled by default.
   2. Edit your crs config to include the users allowed to be mentioned (field `user_mentions_whitelist`).
 - The action itself only leaves `@user` mentions in comments; notification delivery depends on GitHub's handling of mentions and user settings.
 

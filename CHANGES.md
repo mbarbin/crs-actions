@@ -1,3 +1,9 @@
+## 1.0.0-alpha.4 (2025-06-30)
+
+### Changed
+
+- Switch to kebab case for actions inputs/outputs (#8, @mbarbin).
+
 ## 1.0.0-alpha.3 (2025-06-30)
 
 ### Added
