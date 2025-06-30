@@ -1,4 +1,9 @@
-## 1.0.0-alpha.3 (unreleased)
+## 1.0.0-alpha.3 (2025-06-30)
+
+### Added
+
+- Add notes and helpers to create releases (#7, @mbarbin).
+- Add licenses notices (#5, @mbarbin)
 
 ### Changed
 
