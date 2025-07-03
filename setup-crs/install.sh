@@ -1,4 +1,6 @@
 #!/bin/sh
+# SPDX-FileCopyrightText: 2025 Mathieu Barbin <mathieu.barbin@gmail.com>
+# SPDX-License-Identifier: MIT
 set -eu
 
 if [ -z "${CRS_VERSION:-}" ]; then
