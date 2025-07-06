@@ -23,4 +23,4 @@ jobs:
 
       - name: Test local test script
         run: |
-          ./setup-crs/test-install.sh 0.0.20250626
+          ./setup-crs/test-install.sh 0.0.20250705

@@ -31,9 +31,6 @@ on:
   pull_request:
     branches: [main]
 
-permissions:
-  pull-requests: write
-
 jobs:
   comment-crs-in-pr:
     runs-on: ubuntu-latest
@@ -45,7 +42,7 @@ jobs:
       - name: Install crs
         uses: mbarbin/crs-actions/setup-crs@v1.0.0
         with:
-          crs-version: 0.0.20250626
+          crs-version: 0.0.20250705
       - name: Install reviewdog
         uses: reviewdog/action-setup@v1
       - name: Comment on CRs in PR
