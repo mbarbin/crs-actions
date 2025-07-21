@@ -22,6 +22,7 @@ runs:
         CRS_CONFIG: ${{ inputs.crs-config }}
         WITH_USER_MENTIONS: ${{ inputs.with-user-mentions }}
         PULL_REQUEST_AUTHOR: ${{ github.event.pull_request.user.login }}
+        PULL_REQUEST_BASE: ${{ github.event.pull_request.base.sha }}
         REVIEWDOG_GITHUB_API_TOKEN: ${{ github.token }}
 branding:
   icon: "git-pull-request"
