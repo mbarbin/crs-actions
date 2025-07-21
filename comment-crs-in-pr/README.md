@@ -53,10 +53,11 @@ jobs:
 
 ### Example crs-config.json
 
-Currently expected to be a json5 file to save in the repo. For example:
+The config is expected to be a json5 file to save in the repo. For example:
 
 ```json
 {
+  "default_repo_owner": "user1",
   "user_mentions_whitelist": [
     "user1",
     "user2",
