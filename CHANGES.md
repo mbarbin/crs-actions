@@ -1,5 +1,9 @@
 ## 1.0.0-alpha.5 (unreleased)
 
+### Added
+
+- Add workflow `annotate-crs-in-pr` (#11, @mbarbin).
+
 ### Changed
 
 - Improve internal scripts (#9, @mbarbin).
