@@ -19,14 +19,7 @@ The `crs-version` input is **mandatory** and upgrading it is the responsibility 
 
 The version of this action (`setup-crs`) is tied to the version of the `crs` binary it installs, because the action invokes `crs` with specific CLI flags and options that may change between versions.
 
-Each version of this action is tested and blessed for compatibility with specific versions of `crs`.
-
-| Action Version | Blessed crs Version | Note                   |
-|:--------------:|:-------------------:|:-----------------------|
-| v1.0.0         | 0.0.20250705        | latest, recommended    |
-| v1.0.0         | 0.0.20250626        | supported              |
-
-_This table will be updated as new versions are released._
+Each version of the actions defined in this repository is tested and blessed for compatibility with specific versions of `crs`. The compatibility is documented as a table in the repository root `../README.md`.
 
 ## Features
 
