@@ -1,0 +1,29 @@
+name: "summarize-crs-in-pr"
+description: "Post or update a comment with a summary of CRs in a pull request."
+author: "crs contributors"
+inputs:
+  crs-config:
+    description: "Path to the crs config file."
+    required: false
+    default: ".github/crs-config.json"
+  with-user-mentions:
+    description: "Whether to mention users in comments."
+    required: false
+    default: "true"
+runs:
+  using: "composite"
+  steps:
+    - name: Summarize CRs in PR
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const script = require('${{ github.action_path }}/summarize-crs-in-pr.js');
+          await script({github, context, core, exec});
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
+        CRS_CONFIG: ${{ inputs.crs-config }}
+        WITH_USER_MENTIONS: ${{ inputs.with-user-mentions }}
+branding:
+  icon: "list"
+  color: "blue"
