@@ -19,7 +19,7 @@ jobs:
       - name: Install crs using setup-crs action
         uses: ./setup-crs
         with:
-          crs-version: 0.0.20250626
+          crs-version: 0.0.20250705
 
       - name: Check crs version
         run: crs --version
