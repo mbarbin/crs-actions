@@ -1,3 +1,9 @@
+## 1.0.0-alpha.5 (unreleased)
+
+### Removed
+
+- Removed `v1` tag. Require upgrading to a specific version (#9, @mbarbin).
+
 ## 1.0.0-alpha.4 (2025-06-30)
 
 ### Changed
