@@ -23,7 +23,7 @@ Each version of this action is tested and blessed for compatibility with specifi
 
 | Action Version | Blessed crs Version |
 |:--------------:|:-------------------:|
-| v1             | 0.0.20250626        |
+| v1.0.0         | 0.0.20250626        |
 
 _This table will be updated as new versions are released._
 

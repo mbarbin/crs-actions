@@ -43,13 +43,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install crs
-        uses: mbarbin/crs-actions/setup-crs@v1
+        uses: mbarbin/crs-actions/setup-crs@v1.0.0
         with:
           crs-version: 0.0.20250626
       - name: Install reviewdog
         uses: reviewdog/action-setup@v1
       - name: Comment on CRs in PR
-        uses: mbarbin/crs-actions/comment-crs-in-pr@v1
+        uses: mbarbin/crs-actions/comment-crs-in-pr@v1.0.0
         with:
           crs-config: .github/crs-config.json
 ```
