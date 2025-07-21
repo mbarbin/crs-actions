@@ -4,9 +4,6 @@ on:
   pull_request:
     branches: [main]
 
-permissions:
-  pull-requests: write
-
 jobs:
   comment-crs-in-pr:
     runs-on: ubuntu-latest
