@@ -1,0 +1,29 @@
+name: "create-crs-pr-check"
+description: "Create a GitHub check with CRs in a pull request using reviewdog."
+author: "crs contributors"
+inputs:
+  crs-config:
+    description: "Path to the crs config file."
+    required: false
+    default: ".github/crs-config.json"
+  with-user-mentions:
+    description: "Whether to mention users in comments. If set to 'true', the action will enable the user mention whitelist as configured in the crs config file (defaults to no users)."
+    required: false
+    default: "true"
+runs:
+  using: "composite"
+  steps:
+    - name: Create CRs PR Check
+      if: github.event_name == 'pull_request'
+      shell: sh
+      run: |
+        "${{ github.action_path }}/create-crs-pr-check.sh"
+      env:
+        CRS_CONFIG: ${{ inputs.crs-config }}
+        WITH_USER_MENTIONS: ${{ inputs.with-user-mentions }}
+        PULL_REQUEST_AUTHOR: ${{ github.event.pull_request.user.login }}
+        PULL_REQUEST_BASE: ${{ github.event.pull_request.base.sha }}
+        REVIEWDOG_GITHUB_API_TOKEN: ${{ github.token }}
+branding:
+  icon: "check-circle"
+  color: "blue"
