@@ -10,6 +10,7 @@ Reusable GitHub Actions for the crs code review tool.
 
 - `setup-crs`: Installs the crs executable for use in workflows.
 - `comment-crs-in-pr`: Comments on CRs in a pull request using reviewdog.
+- `annotate-crs-in-pr`: Annotate CRs in a pull request with GHA workflow annotations.
 
 ## Usage
 

@@ -1,0 +1,23 @@
+name: "annotate-crs-in-pr"
+description: "Annotate CRs in a pull request with GHA workflow annotations."
+author: "crs contributors"
+inputs:
+  crs-config:
+    description: "Path to the crs config file."
+    required: false
+    default: ".github/crs-config.json"
+runs:
+  using: "composite"
+  steps:
+    - name: Annotate CRs in PR
+      if: github.event_name == 'pull_request'
+      shell: sh
+      run: |
+        "${{ github.action_path }}/annotate-crs-in-pr.sh"
+      env:
+        CRS_CONFIG: ${{ inputs.crs-config }}
+        PULL_REQUEST_AUTHOR: ${{ github.event.pull_request.user.login }}
+        PULL_REQUEST_BASE: ${{ github.event.pull_request.base.sha }}
+branding:
+  icon: "edit"
+  color: "blue"
