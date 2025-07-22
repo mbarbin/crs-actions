@@ -1,5 +1,5 @@
-name: "comment-crs-in-pr"
-description: "Comment on CRs in a pull request using reviewdog."
+name: "create-crs-pr-job-summary"
+description: "Create a GitHub Job Summary with CRs in a pull request."
 author: "crs contributors"
 inputs:
   crs-config:
@@ -7,23 +7,22 @@ inputs:
     required: false
     default: ".github/crs-config.json"
   with-user-mentions:
-    description: "Whether to mention users in comments. If set to 'true', the action will enable the user mention whitelist as configured in the crs config file (defaults to no users)."
+    description: "Whether to mention users in the summary. If set to 'true', the action will enable the user mention whitelist as configured in the crs config file (defaults to no users)."
     required: false
     default: "true"
 runs:
   using: "composite"
   steps:
-    - name: Comment on CRs in PR
+    - name: Create CRs PR Job Summary
       if: github.event_name == 'pull_request'
       shell: sh
       run: |
-        "${{ github.action_path }}/comment-crs-in-pr.sh"
+        "${{ github.action_path }}/create-crs-pr-job-summary.sh" >> $GITHUB_STEP_SUMMARY
       env:
         CRS_CONFIG: ${{ inputs.crs-config }}
         WITH_USER_MENTIONS: ${{ inputs.with-user-mentions }}
         PULL_REQUEST_AUTHOR: ${{ github.event.pull_request.user.login }}
         PULL_REQUEST_BASE: ${{ github.event.pull_request.base.sha }}
-        REVIEWDOG_GITHUB_API_TOKEN: ${{ github.token }}
 branding:
-  icon: "message-circle"
-  color: "green"
+  icon: "list"
+  color: "yellow"
