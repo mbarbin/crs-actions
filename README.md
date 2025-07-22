@@ -29,3 +29,13 @@ _This table will be updated as new versions are released._
 - See each action's `README.md` and `action.yml` for detailed usage and options.
 - The documentation of the [crs](https://mbarbin.github.io/crs/) tool.
 - Some workflows involve the very useful [reviewdog](https://github.com/reviewdog/reviewdog) code review integration tool. Make sure to give it a star if you like it!
+
+## TODO
+
+- "on-push" workflows for revision based checks (e.g. checking the tip of the main branch).
+
+Currently we've focused the effort on PRs only.
+
+## Feedback
+
+ The workflows provided here are experimental examples, showcasing what should be possible combining GitHub Actions tools with crs. This space is new and evolving, and we’re eager to learn how these workflows can be integrated and adapted to fit real projects. Feel free to mix, match, and tweak the workflows and their parameters to suit your needs. We warmly encourage adventurous users to share feedback, ideas, or questions in the project’s discussion space or by opening an issue — your input will help shape future improvements! Thank you.
