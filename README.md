@@ -12,6 +12,7 @@ Reusable GitHub Actions for the [crs](https://github.com/mbarbin/crs) code revie
 - [`comment-crs-in-pr`](./comment-crs-in-pr/README.md): Comments on CRs in a pull request using reviewdog.
 - [`annotate-crs-in-pr`](./annotate-crs-in-pr/README.md): Annotate CRs in a pull request with GHA workflow annotations.
 - [`create-crs-pr-check`](./create-crs-pr-check/README.md): Create a GitHub check with CRs in a pull request using reviewdog.
+- [`create-crs-pr-job-summary`](./create-crs-pr-job-summary/README.md): Create a GitHub Job Summary with CRs in a pull request.
 
 ## Compatibility
 
