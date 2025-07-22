@@ -1,11 +1,16 @@
-## 1.0.0-alpha.5 (unreleased)
+## 1.0.0-alpha.5 (2025-07-22)
 
 ### Added
 
-- Add workflow `annotate-crs-in-pr` (#11, @mbarbin).
+- Add workflow `summarize-crs-in-pr` (#16, @mbarbin).
+- Add workflow `create-crs-pr-job-summary` (#15, @mbarbin).
+- Add workflow `create-crs-pr-check` (#14, @mbarbin).
+- Add workflow `annotate-crs-in-pr` (#13, @mbarbin).
 
 ### Changed
 
+- Update latest `crs` version (#12, @mbarbin).
+- Prepare populating the PR base revision (#11, @mbarbin).
 - Improve internal scripts (#9, @mbarbin).
 
 ### Removed
