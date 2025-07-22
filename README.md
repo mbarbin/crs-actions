@@ -8,11 +8,12 @@ Reusable GitHub Actions for the [crs](https://github.com/mbarbin/crs) code revie
 
 ## Actions
 
-- [`setup-crs`](./setup-crs/README.md): Installs the crs executable for use in workflows.
-- [`comment-crs-in-pr`](./comment-crs-in-pr/README.md): Comments on CRs in a pull request using reviewdog.
+- [`setup-crs`](./setup-crs/README.md): Install the crs executable for use in workflows.
+- [`comment-crs-in-pr`](./comment-crs-in-pr/README.md): Comment on CRs in a pull request using reviewdog.
 - [`annotate-crs-in-pr`](./annotate-crs-in-pr/README.md): Annotate CRs in a pull request with GHA workflow annotations.
 - [`create-crs-pr-check`](./create-crs-pr-check/README.md): Create a GitHub check with CRs in a pull request using reviewdog.
 - [`create-crs-pr-job-summary`](./create-crs-pr-job-summary/README.md): Create a GitHub Job Summary with CRs in a pull request.
+- [`summarize-crs-in-pr`](./summarize-crs-in-pr/README.md): Post or update a comment with a summary of CRs in a pull request.
 
 ## Compatibility
 
