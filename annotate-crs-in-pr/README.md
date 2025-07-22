@@ -10,8 +10,11 @@ A reusable GitHub Action to annotate CRs in a pull request using GHA [annotation
     crs-config: .github/crs-config.json
 ```
 
-- Requires the `crs` executables to be available in the PATH.
 - See [`action.yml`](./action.yml) for all available options.
+
+### Requirements
+
+- The `crs` CLI must be available in the runner environment PATH.
 
 ### Permissions
 
@@ -68,4 +71,4 @@ You can save it at `.github/crs-config.json` or specify a custom path with the `
 
 ## License
 
-See [LICENSE](../LICENSE).
+MIT. See [LICENSE](../LICENSE).

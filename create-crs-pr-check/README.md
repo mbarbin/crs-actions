@@ -10,8 +10,11 @@ A reusable GitHub Action to create a [GitHub Check](https://docs.github.com/en/p
     crs-config: .github/crs-config.json
 ```
 
-- Requires the `crs` and `reviewdog` executables to be available in the PATH.
 - See [`action.yml`](./action.yml) for all available options.
+
+### Requirements
+
+- The `crs` & `reviewdog` CLIs must be available in the runner environment PATH.
 
 ### Permissions
 
@@ -70,4 +73,4 @@ You can save it at `.github/crs-config.json` or specify a custom path with the `
 
 ## License
 
-See [LICENSE](../LICENSE).
+MIT. See [LICENSE](../LICENSE).

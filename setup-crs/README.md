@@ -29,4 +29,4 @@ Each version of the actions defined in this repository is tested and blessed for
 
 ## License
 
-See [LICENSE](../LICENSE).
+MIT. See [LICENSE](../LICENSE).

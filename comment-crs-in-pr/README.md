@@ -10,8 +10,11 @@ A reusable GitHub Action to comment on CRs in a pull request using reviewdog.
     crs-config: .github/crs-config.json
 ```
 
-- Requires the `crs` and `reviewdog` executables to be available in the PATH.
 - See [`action.yml`](./action.yml) for all available options.
+
+### Requirements
+
+- The `crs` & `reviewdog` CLIs must be available in the runner environment PATH.
 
 ### Permissions
 
@@ -82,4 +85,4 @@ With `with-user-mentions: true`, the action is enabled to include `@user` mentio
 
 ## License
 
-See [LICENSE](../LICENSE).
+MIT. See [LICENSE](../LICENSE).
