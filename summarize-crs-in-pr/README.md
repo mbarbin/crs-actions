@@ -46,8 +46,6 @@ jobs:
         uses: mbarbin/crs-actions/setup-crs@v1.0.0
         with:
           crs-version: 0.0.20250705
-      - name: Install reviewdog
-        uses: reviewdog/action-setup@v1
       - name: Summarize CRs in PR
         uses: mbarbin/crs-actions/summarize-crs-in-pr@v1.0.0
         with:
