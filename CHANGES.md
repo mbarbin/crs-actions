@@ -1,3 +1,9 @@
+## 1.0.0-alpha.6 (2025-07-23)
+
+### Changed
+
+- Moved repo under org `cr-review-tools/` (@mbarbin).
+
 ## 1.0.0-alpha.5 (2025-07-22)
 
 ### Added
