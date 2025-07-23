@@ -5,7 +5,7 @@ A reusable GitHub Action to post or update a comment with a summary of CRs in a 
 ## Usage
 
 ```yaml
-- uses: mbarbin/crs-actions/summarize-crs-in-pr@<ref>
+- uses: cr-review-tools/crs-actions/summarize-crs-in-pr@<ref>
   with:
     crs-config: .github/crs-config.json
 ```
@@ -43,11 +43,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install crs
-        uses: mbarbin/crs-actions/setup-crs@v1.0.0
+        uses: cr-review-tools/crs-actions/setup-crs@v1.0.0
         with:
           crs-version: 0.0.20250705
       - name: Summarize CRs in PR
-        uses: mbarbin/crs-actions/summarize-crs-in-pr@v1.0.0
+        uses: cr-review-tools/crs-actions/summarize-crs-in-pr@v1.0.0
         with:
           crs-config: .github/crs-config.json
 ```

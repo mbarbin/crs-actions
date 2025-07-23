@@ -5,7 +5,7 @@ A reusable GitHub Action to download and install the [crs](https://github.com/mb
 ## Usage
 
 ```yaml
-- uses: mbarbin/crs-actions/setup-crs@<ref>
+- uses: cr-review-tools/crs-actions/setup-crs@<ref>
   with:
     crs-version: 0.0.20250705
 ```

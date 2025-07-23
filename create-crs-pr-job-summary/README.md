@@ -5,7 +5,7 @@ A reusable GitHub Action to create a [GitHub Job Summary](https://github.blog/ne
 ## Usage
 
 ```yaml
-- uses: mbarbin/crs-actions/create-crs-pr-job-summary@<ref>
+- uses: cr-review-tools/crs-actions/create-crs-pr-job-summary@<ref>
   with:
     crs-config: .github/crs-config.json
 ```
@@ -45,11 +45,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install crs
-        uses: mbarbin/crs-actions/setup-crs@v1.0.0
+        uses: cr-review-tools/crs-actions/setup-crs@v1.0.0
         with:
           crs-version: 0.0.20250705
       - name: Create CRs PR Job Summary
-        uses: mbarbin/crs-actions/create-crs-pr-job-summary@v1.0.0
+        uses: cr-review-tools/crs-actions/create-crs-pr-job-summary@v1.0.0
         with:
           crs-config: .github/crs-config.json
 ```

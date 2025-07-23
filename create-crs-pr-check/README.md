@@ -5,7 +5,7 @@ A reusable GitHub Action to create a [GitHub Check](https://docs.github.com/en/p
 ## Usage
 
 ```yaml
-- uses: mbarbin/crs-actions/create-crs-pr-check@<ref>
+- uses: cr-review-tools/crs-actions/create-crs-pr-check@<ref>
   with:
     crs-config: .github/crs-config.json
 ```
@@ -43,13 +43,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install crs
-        uses: mbarbin/crs-actions/setup-crs@v1.0.0
+        uses: cr-review-tools/crs-actions/setup-crs@v1.0.0
         with:
           crs-version: 0.0.20250705
       - name: Install reviewdog
         uses: reviewdog/action-setup@v1
       - name: Create CRs PR Check
-        uses: mbarbin/crs-actions/create-crs-pr-check@v1.0.0
+        uses: cr-review-tools/crs-actions/create-crs-pr-check@v1.0.0
         with:
           crs-config: .github/crs-config.json
 ```
