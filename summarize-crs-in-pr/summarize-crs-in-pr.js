@@ -1,3 +1,5 @@
+// SPDX-FileCopyrightText: 2025 Mathieu Barbin <mathieu.barbin@gmail.com>
+// SPDX-License-Identifier: MIT
 // This script needs to be a  CommonJS module for use with actions/github-script.
 
 const path = require('path');
