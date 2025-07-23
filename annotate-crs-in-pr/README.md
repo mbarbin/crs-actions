@@ -69,6 +69,10 @@ The config is expected to be a json5 file to save in the repo. For example:
 
 You can save it at `.github/crs-config.json` or specify a custom path with the `crs-config` input in your workflow.
 
+### See it in action
+
+Find a live workflow example for this action in the [crs-actions-examples](https://github.com/cr-review-tools/crs-actions-examples) repository.
+
 ## License
 
 MIT. See [LICENSE](../LICENSE).

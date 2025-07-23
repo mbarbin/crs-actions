@@ -24,11 +24,16 @@ Reusable GitHub Actions for the [crs](https://github.com/mbarbin/crs) code revie
 
 _This table will be updated as new versions are released._
 
+## Live Examples
+
+Curious how these actions work in practice? Visit the [crs-actions-examples](https://github.com/cr-review-tools/crs-actions-examples) repository for a collection of workflow examples covering all actions defined here. These examples are designed to give you a quick preview and help you browse and discover how each workflow operates — a handy resource as you explore and experiment!
+
 ## Usage, Documentation, Links & Resources
 
 - See each action's `README.md` and `action.yml` for detailed usage and options.
 - The documentation of the [crs](https://mbarbin.github.io/crs/) tool.
-- Some workflows involve the very useful [reviewdog](https://github.com/reviewdog/reviewdog) code review integration tool. Make sure to give it a star if you like it!
+- Some workflows involve the very useful [reviewdog](https://github.com/reviewdog/reviewdog) code review integration tool. Make sure to give it a ⭐ on GitHub if you like it!
+- Repo with live examples [crs-actions-examples](https://github.com/cr-review-tools/crs-actions-examples).
 
 ## TODO
 

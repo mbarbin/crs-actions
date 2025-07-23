@@ -27,6 +27,10 @@ Each version of the actions defined in this repository is tested and blessed for
 - Verifies the build attestation (if `gh` CLI is available).
 - Installs to a temporary directory and updates the `PATH`.
 
+### See it in action
+
+Find a live workflow example for this action in the [crs-actions-examples](https://github.com/cr-review-tools/crs-actions-examples) repository.
+
 ## License
 
 MIT. See [LICENSE](../LICENSE).

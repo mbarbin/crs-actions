@@ -81,10 +81,14 @@ With `with-user-mentions: true`, the action is enabled to include `@user` mentio
   2. Edit your crs config to include the users allowed to be mentioned (field `user_mentions_whitelist`).
 - The action itself only leaves `@user` mentions in comments; notification delivery depends on GitHub's handling of mentions and user settings.
 
-## How it works
+### How it works
 
 - Runs `crs` to create summary tables with the provided config and options.
 - Posts or updates a PR comment with the summary in the PR conversation, using a hidden marker for idempotency. The comment is edited in place when changed.
+
+### See it in action
+
+Find a live workflow example for this action in the [crs-actions-examples](https://github.com/cr-review-tools/crs-actions-examples) repository.
 
 ## License
 
