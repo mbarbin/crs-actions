@@ -5,7 +5,7 @@ A reusable GitHub Action to post or update a comment with a summary of CRs in a 
 ## Usage
 
 ```yaml
-- uses: cr-review-tools/crs-actions/summarize-crs-in-pr@<ref>
+- uses: mbarbin/crs-actions/summarize-crs-in-pr@<ref>
   with:
     crs-config: .github/crs-config.json
 ```
@@ -43,11 +43,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install crs
-        uses: cr-review-tools/crs-actions/setup-crs@v1.0.0
+        uses: mbarbin/crs-actions/setup-crs@v1.0.0
         with:
           crs-version: 0.0.20250705
       - name: Summarize CRs in PR
-        uses: cr-review-tools/crs-actions/summarize-crs-in-pr@v1.0.0
+        uses: mbarbin/crs-actions/summarize-crs-in-pr@v1.0.0
         with:
           crs-config: .github/crs-config.json
 ```
@@ -88,7 +88,7 @@ With `with-user-mentions: true`, the action is enabled to include `@user` mentio
 
 ### See it in action
 
-Find a live workflow example for this action in the [crs-actions-examples](https://github.com/cr-review-tools/crs-actions-examples) repository.
+Find a live workflow example for this action in the [crs-actions-examples](https://github.com/mbarbin/crs-actions-examples) repository.
 
 ## License
 

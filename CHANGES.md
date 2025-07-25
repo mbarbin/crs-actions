@@ -1,3 +1,9 @@
+## 1.0.0-alpha.7 (unreleased)
+
+### Changed
+
+- Moved back under `mbarbin/`, done with gh-transfert testing for now (@mbarbin).
+
 ## 1.0.0-alpha.6 (2025-07-23)
 
 ### Changed

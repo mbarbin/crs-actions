@@ -5,7 +5,7 @@ A reusable GitHub Action to annotate CRs in a pull request using GHA [annotation
 ## Usage
 
 ```yaml
-- uses: cr-review-tools/crs-actions/annotate-crs-in-pr@<ref>
+- uses: mbarbin/crs-actions/annotate-crs-in-pr@<ref>
   with:
     crs-config: .github/crs-config.json
 ```
@@ -43,11 +43,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Install crs
-        uses: cr-review-tools/crs-actions/setup-crs@v1.0.0
+        uses: mbarbin/crs-actions/setup-crs@v1.0.0
         with:
           crs-version: 0.0.20250705
       - name: Annotate CRs in PR
-        uses: cr-review-tools/crs-actions/annotate-crs-in-pr@v1.0.0
+        uses: mbarbin/crs-actions/annotate-crs-in-pr@v1.0.0
         with:
           crs-config: .github/crs-config.json
 ```
@@ -71,7 +71,7 @@ You can save it at `.github/crs-config.json` or specify a custom path with the `
 
 ### See it in action
 
-Find a live workflow example for this action in the [crs-actions-examples](https://github.com/cr-review-tools/crs-actions-examples) repository.
+Find a live workflow example for this action in the [crs-actions-examples](https://github.com/mbarbin/crs-actions-examples) repository.
 
 ## License
 
