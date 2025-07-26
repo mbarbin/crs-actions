@@ -40,7 +40,7 @@ SOFTWARE.
 - Repository: https://github.com/mbarbin/crs
 - License: LGPL-3.0-or-later WITH LGPL-3.0-linking-exception
 
-The `crs-actions` project uses the `crs` tool as an external binary. The action does not include, modify, or distribute the source code of `crs`, but only invokes its executable as required. The `crs` project is licensed under LGPL-3.0-or-later WITH LGPL-3.0-linking-exception, which explicitly permits use of the binary by other software, including software under a different license (such as MIT). Therefore, it is compatible and appropriate to use the `crs` binary in this MIT-licensed action repository. Users are encouraged to consult the `crs` project and its license for more details.
+This project uses the `crs` tool as an external binary. The action does not include, modify, or distribute the source code of `crs`, but only invokes its executable as required. The `crs` project is licensed under LGPL-3.0-or-later WITH LGPL-3.0-linking-exception, which explicitly permits use of the binary by other software, including software under a different license (such as MIT). Therefore, it is compatible and appropriate to use the `crs` binary in this MIT-licensed action repository. Users are encouraged to consult the `crs` project and its license for more details.
 
 ```text
 crs - A tool for managing code review comments embedded in source code
