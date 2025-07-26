@@ -1,24 +1,35 @@
-name: Comment on CRs in PR
+name: CRs Workflows
 
 on:
   pull_request:
-    branches: [main]
+    branches:
+      - "**" # This will match pull requests targeting any branch
+
+permissions:
+  contents: read
+  pull-requests: write
 
 jobs:
-  comment-crs-in-pr:
+  crs-workflows:
     runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Install crs
         uses: ./setup-crs
         with:
           crs-version: 0.0.20250705
+
       - name: Install reviewdog
         uses: reviewdog/action-setup@v1
+
       - name: Comment on CRs in PR
         uses: ./comment-crs-in-pr
+        with:
+          crs-config: .github/crs-config.json
+
+      - name: Summarize CRs in PR
+        uses: ./summarize-crs-in-pr
         with:
           crs-config: .github/crs-config.json
