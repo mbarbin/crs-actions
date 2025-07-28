@@ -29,8 +29,9 @@ jobs:
         with:
           crs-config: .github/crs-config.json
 
+      # CR mbarbin: After testing, remove the empty-summary override.
       - name: Summarize CRs in PR
         uses: ./summarize-crs-in-pr
         with:
           crs-config: .github/crs-config.json
-          initialize-empty-summary: true
+          initialize-empty-summary: false
