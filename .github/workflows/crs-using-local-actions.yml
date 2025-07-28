@@ -33,4 +33,4 @@ jobs:
         uses: ./summarize-crs-in-pr
         with:
           crs-config: .github/crs-config.json
-          initialize-empty-summary: blah
+          initialize-empty-summary: true
