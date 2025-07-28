@@ -69,6 +69,20 @@ The config is expected to be a json5 file to save in the repo. For example:
 
 You can save it at `.github/crs-config.json` or specify a custom path with the `crs-config` input in your workflow.
 
+### Empty Summary Initialization
+
+By default, this action does not create a summary comment if a pull request has no CRs — helping to avoid unnecessary notifications for PRs that never have any CRs.
+
+If you prefer to always create a summary comment (even when there are no CRs), you can opt in by setting `initialize-empty-summary: true`:
+
+```yaml
+- uses: mbarbin/crs-actions/summarize-crs-in-pr@<ref>
+  with:
+    initialize-empty-summary: true
+```
+
+This option only affects the initial creation of the summary comment. If a summary comment already exists and the PR later becomes CR-clean, the comment will always be updated to show that no CRs remain — regardless of the `initialize-empty-summary` setting.
+
 ### User Mentions
 
 With `with-user-mentions: true`, the action is enabled to include `@user` mentions below the summary table for users who are assigned CRs.
