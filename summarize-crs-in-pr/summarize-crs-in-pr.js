@@ -28,7 +28,7 @@ function getCrsSummary(crsConfig, withUserMentions, reviewMode, pullRequestAutho
     const args = [
       'tools', 'github', 'summary-comment',
       `--config=${crsConfig}`,
-      `--with-user-mentions=${withUserMentions}`,
+      `--with-user-mentions=${withUserMentions ? 'true' : 'false'}`,
       `--review-mode=${reviewMode}`,
       `--pull-request-author=${pullRequestAuthor}`
     ];
@@ -89,6 +89,21 @@ async function createOrUpdateComment(github, context, prNumber, body, existing, 
   }
 }
 
+function getBooleanInput(name, defaultValue, core) {
+  const value = process.env[name];
+  if (value === undefined || value === '') {
+    return defaultValue;
+  }
+  if (value === 'true') {
+    return true;
+  }
+  if (value === 'false') {
+    return false;
+  }
+  core.setFailed(`Invalid value for input ${name}: expected 'true' or 'false', got '${value}'`);
+  return null;
+}
+
 module.exports = async ({github, context, core, exec}) => {
   // Input validation
   let crsConfig;
@@ -98,7 +113,12 @@ module.exports = async ({github, context, core, exec}) => {
     core.setFailed(`Invalid CRS config path: ${err.message}`);
     return;
   }
-  const withUserMentions = (process.env.WITH_USER_MENTIONS === 'false') ? 'false' : 'true';
+  const withUserMentions = getBooleanInput('WITH_USER_MENTIONS', true, core);
+  const initializeEmptySummary = getBooleanInput('INITIALIZE_EMPTY_SUMMARY', false, core);
+  if (withUserMentions === null || initializeEmptySummary === null) {
+    return;
+  }
+
   const pr = context.payload.pull_request;
   const pullRequestAuthor = pr && pr.user && pr.user.login ? pr.user.login : '';
   const reviewMode = 'pull-request';
@@ -112,7 +132,8 @@ module.exports = async ({github, context, core, exec}) => {
 
   // Build pretty summary and always append documentation header & footer
   let prettySummary = summary.trim();
-  if (prettySummary === '') {
+  const isSummaryEmpty = prettySummary === '';
+  if (isSummaryEmpty) {
     prettySummary = [
       '### ✅ No CRs found in this pull request!'
     ].join('\n');
