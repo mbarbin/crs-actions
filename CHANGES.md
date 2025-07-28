@@ -3,7 +3,7 @@
 ### Changed
 
 - Make `summarize-crs-in-pr` not create an initial comment with no CRs unless customized (@mbarbin).
-- Moved back under `mbarbin/`, done with gh-transfert testing for now (@mbarbin).
+- Moved back under `mbarbin/`, done with gh-transfer testing for now (@mbarbin).
 
 ## 1.0.0-alpha.6 (2025-07-23)
 
