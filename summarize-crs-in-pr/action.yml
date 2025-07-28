@@ -10,6 +10,10 @@ inputs:
     description: "Whether to mention users in comments."
     required: false
     default: "true"
+  initialize-empty-summary:
+    description: "Whether to create a comment when there are initially no CRs in the PR."
+    required: false
+    default: "false"
 runs:
   using: "composite"
   steps:
@@ -24,6 +28,7 @@ runs:
         GITHUB_TOKEN: ${{ github.token }}
         CRS_CONFIG: ${{ inputs.crs-config }}
         WITH_USER_MENTIONS: ${{ inputs.with-user-mentions }}
+        INITIALIZE_EMPTY_SUMMARY: ${{ inputs.initialize-empty-summary }}
 branding:
   icon: "list"
   color: "blue"
