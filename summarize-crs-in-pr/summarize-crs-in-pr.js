@@ -164,5 +164,11 @@ module.exports = async ({github, context, core, exec}) => {
   const existing = comments.find(
     c => c.user.login === 'github-actions[bot]' && c.body.includes(marker)
   );
+
+  if (!existing && isSummaryEmpty && !initializeEmptySummary) {
+    core.info('No CRs found and initialize-empty-summary is false, skipping comment creation.');
+    return;
+  }
+
   await createOrUpdateComment(github, context, pr.number, body, existing, core);
 };
