@@ -3,6 +3,8 @@
   "user_mentions_allowlist": [
     "mbarbin"
   ],
-  "invalid_crs_annotation_severity": "Error",
+  // CR mbarbin: Testing with a CR and a warning for the wrapped enum below.
+  // To be removed after confirmation things work as expected.
+  "invalid_crs_annotation_severity": [ "Error" ],
   "crs_due_now_annotation_severity": "Warning"
 }
