@@ -125,6 +125,16 @@ module.exports = async ({github, context, core, exec}) => {
   const pullRequestBase = pr && pr.base && pr.base.sha ? pr.base.sha : '';
   const reviewMode = 'pull-request';
 
+  // Validate required PR information
+  if (!pullRequestAuthor) {
+    core.setFailed('Unable to determine pull request author. Ensure this action is running on a pull_request event.');
+    return;
+  }
+  if (!pullRequestBase) {
+    core.setFailed('Unable to determine pull request base SHA. Ensure this action is running on a pull_request event.');
+    return;
+  }
+
   // Check for CRS availability
   if (!checkCrsAvailable(core)) return;
 
