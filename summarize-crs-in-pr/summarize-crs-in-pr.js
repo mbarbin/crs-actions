@@ -23,14 +23,15 @@ function checkCrsAvailable(core) {
   }
 }
 
-function getCrsSummary(crsConfig, withUserMentions, reviewMode, pullRequestAuthor, core) {
+function getCrsSummary(crsConfig, withUserMentions, reviewMode, pullRequestAuthor, pullRequestBase, core) {
   try {
     const args = [
       'tools', 'github', 'summary-comment',
       `--config=${crsConfig}`,
       `--with-user-mentions=${withUserMentions ? 'true' : 'false'}`,
       `--review-mode=${reviewMode}`,
-      `--pull-request-author=${pullRequestAuthor}`
+      `--pull-request-author=${pullRequestAuthor}`,
+      `--pull-request-base=${pullRequestBase}`
     ];
     return execFileSync('crs', args, { encoding: 'utf8' });
   } catch (err) {
@@ -121,13 +122,14 @@ module.exports = async ({github, context, core, exec}) => {
 
   const pr = context.payload.pull_request;
   const pullRequestAuthor = pr && pr.user && pr.user.login ? pr.user.login : '';
+  const pullRequestBase = pr && pr.base && pr.base.sha ? pr.base.sha : '';
   const reviewMode = 'pull-request';
 
   // Check for CRS availability
   if (!checkCrsAvailable(core)) return;
 
   // Run the CRS summary-comment command safely
-  const summary = getCrsSummary(crsConfig, withUserMentions, reviewMode, pullRequestAuthor, core);
+  const summary = getCrsSummary(crsConfig, withUserMentions, reviewMode, pullRequestAuthor, pullRequestBase, core);
   if (summary == null) return;
 
   // Build pretty summary and always append documentation header & footer
