@@ -69,6 +69,8 @@ The config is expected to be a json5 file to save in the repo. For example:
 
 You can save it at `.github/crs-config.json` or specify a custom path with the `crs-config` input in your workflow.
 
+You can find the config reference manual [here](https://mbarbin.github.io/crs/docs/reference/crs-actions-config/).
+
 ### Empty Summary Initialization
 
 By default, this action does not create a summary comment if a pull request has no CRs — helping to avoid unnecessary notifications for PRs that never have any CRs.

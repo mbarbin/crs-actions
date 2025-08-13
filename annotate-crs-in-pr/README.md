@@ -69,6 +69,8 @@ The config is expected to be a json5 file to save in the repo. For example:
 
 You can save it at `.github/crs-config.json` or specify a custom path with the `crs-config` input in your workflow.
 
+You can find the config reference manual [here](https://mbarbin.github.io/crs/docs/reference/crs-actions-config/).
+
 ### See it in action
 
 Find a live workflow example for this action in the [crs-actions-examples](https://github.com/mbarbin/crs-actions-examples) repository.
