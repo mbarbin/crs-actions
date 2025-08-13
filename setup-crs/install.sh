@@ -4,7 +4,7 @@
 set -eu
 
 if [ -z "${CRS_VERSION:-}" ]; then
-  echo "Error: CRS_VERSION environment variable must be set to a specific version (e.g., 0.0.20250705)." >&2
+  echo "Error: CRS_VERSION environment variable must be set to a specific version (e.g., 0.0.20250813)." >&2
   exit 1
 fi
 

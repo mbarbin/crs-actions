@@ -45,7 +45,7 @@ jobs:
       - name: Install crs
         uses: mbarbin/crs-actions/setup-crs@v1.0.0
         with:
-          crs-version: 0.0.20250705
+          crs-version: 0.0.20250813
       - name: Summarize CRs in PR
         uses: mbarbin/crs-actions/summarize-crs-in-pr@v1.0.0
         with:
