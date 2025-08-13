@@ -61,7 +61,7 @@ The config is expected to be a json5 file to save in the repo. For example:
 ```json
 {
   "default_repo_owner": "user1",
-  "user_mentions_whitelist": [
+  "user_mentions_allowlist": [
     "user1",
     "user2",
     "user5",
@@ -77,10 +77,10 @@ With `with-user-mentions: true`, the action is enabled to include `@user` mentio
 
 **Note:**
 
-- For user mentions to be effective, each user must be added to a whitelist in the crs config file to enable notifications for them.
+- For user mentions to be effective, each user must be added to an allowlist in the crs config file to enable notifications for them.
 - This is a two-step process:
   1. Enable user mentions in this action (set `with-user-mentions: true`). This is enabled by default.
-  2. Edit your crs config to include the users allowed to be mentioned (field `user_mentions_whitelist`).
+  2. Edit your crs config to include the users allowed to be mentioned (field `user_mentions_allowlist`).
 - The action itself only leaves `@user` mentions in comments; notification delivery depends on GitHub's handling of mentions and user settings.
 
 ### See it in action

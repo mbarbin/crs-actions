@@ -61,7 +61,7 @@ The config is expected to be a json5 file to save in the repo. For example:
 ```json
 {
   "default_repo_owner": "user1",
-  "user_mentions_whitelist": [
+  "user_mentions_allowlist": [
     "user1",
     "user2",
     "user5",
