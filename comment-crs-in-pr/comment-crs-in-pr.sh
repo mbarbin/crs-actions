@@ -16,6 +16,7 @@ crs tools reviewdog annotate-crs \
   --review-mode=pull-request \
   --with-user-mentions="$WITH_USER_MENTIONS" \
   --pull-request-author="$PULL_REQUEST_AUTHOR" \
+  --pull-request-base="$PULL_REQUEST_BASE" \
   > "$TMPFILE"
 status=$?
 reviewdog -f=rdjson -name="crs" -reporter=github-pr-review < "$TMPFILE"
