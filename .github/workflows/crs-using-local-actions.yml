@@ -19,7 +19,7 @@ jobs:
       - name: Install crs
         uses: ./setup-crs
         with:
-          crs-version: 0.0.20250705
+          crs-version: 0.0.20250813
 
       - name: Install reviewdog
         uses: reviewdog/action-setup@v1

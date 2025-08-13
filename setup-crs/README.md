@@ -7,10 +7,10 @@ A reusable GitHub Action to download and install the [crs](https://github.com/mb
 ```yaml
 - uses: mbarbin/crs-actions/setup-crs@<ref>
   with:
-    crs-version: 0.0.20250705
+    crs-version: 0.0.20250813
 ```
 
-- The `crs-version` input is required and must match a published release of crs.
+- The `crs-version` input is required and must match a [published release](https://github.com/mbarbin/crs/releases/) of crs.
 - The action will install the `crs` binary and add it to the `PATH` for subsequent steps.
 
 ### Compatibility Note

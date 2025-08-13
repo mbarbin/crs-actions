@@ -45,7 +45,7 @@ jobs:
       - name: Install crs
         uses: mbarbin/crs-actions/setup-crs@v1.0.0
         with:
-          crs-version: 0.0.20250705
+          crs-version: 0.0.20250813
       - name: Annotate CRs in PR
         uses: mbarbin/crs-actions/annotate-crs-in-pr@v1.0.0
         with:
@@ -59,7 +59,7 @@ The config is expected to be a json5 file to save in the repo. For example:
 ```json
 {
   "default_repo_owner": "user1",
-  "user_mentions_whitelist": [
+  "user_mentions_allowlist": [
     "user1",
     "user2",
     "user5",
@@ -68,6 +68,8 @@ The config is expected to be a json5 file to save in the repo. For example:
 ```
 
 You can save it at `.github/crs-config.json` or specify a custom path with the `crs-config` input in your workflow.
+
+You can find the config reference manual [here](https://mbarbin.github.io/crs/docs/reference/crs-actions-config/).
 
 ### See it in action
 

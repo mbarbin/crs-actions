@@ -7,7 +7,7 @@ inputs:
     required: false
     default: ".github/crs-config.json"
   with-user-mentions:
-    description: "Whether to mention users in the summary. If set to 'true', the action will enable the user mention whitelist as configured in the crs config file (defaults to no users)."
+    description: "Whether to mention users in the summary. If set to 'true', the action will enable the user mention allowlist as configured in the crs config file (defaults to no users)."
     required: false
     default: "true"
 runs:

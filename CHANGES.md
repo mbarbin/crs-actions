@@ -1,3 +1,9 @@
+## 1.0.0-alpha.8 (2025-08-13)
+
+### Changed
+
+- Upgrade to crs.0.0.20250813 and update compatibility matrix (@mbarbin).
+
 ## 1.0.0-alpha.7 (2025-07-28)
 
 ### Changed
