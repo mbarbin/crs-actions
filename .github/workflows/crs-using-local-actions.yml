@@ -26,6 +26,7 @@ jobs:
         with:
           reviewdog_version: v0.20.3
 
+      # CR mbarbin: Hello CR.
       - name: Check reviewdog version
         run: reviewdog -version
 
