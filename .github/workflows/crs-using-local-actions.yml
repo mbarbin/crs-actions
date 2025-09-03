@@ -26,6 +26,9 @@ jobs:
         with:
           reviewdog_version: v0.20.3
 
+      - name: Check reviewdog version
+        run: reviewdog -version
+
       - name: Comment on CRs in PR
         uses: ./comment-crs-in-pr
         with:
