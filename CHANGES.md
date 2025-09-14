@@ -2,6 +2,7 @@
 
 ### Changed
 
+- Upgrade to crs.0.0.20250914 and update compatibility matrix (#23, @mbarbin).
 - Upgrade compatibility matrix for crs.0.0.20250911 (#22, @mbarbin).
 - Pin the versions of internal linting jobs (#21, @mbarbin).
 
