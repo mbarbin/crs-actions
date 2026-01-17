@@ -43,7 +43,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Install crs
         uses: mbarbin/crs-actions/setup-crs@v1.0.0
         with:
