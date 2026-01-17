@@ -1,7 +1,8 @@
-## 1.0.0-alpha.X (unreleased)
+## 1.0.0-alpha.9 (2026-01-17)
 
 ### Changed
 
+- Use full-sha versions with all actions dependencies (#25, @mbarbin).
 - Upgrade to crs.0.0.20250914 and update compatibility matrix (#23, @mbarbin).
 - Upgrade compatibility matrix for crs.0.0.20250911 (#22, @mbarbin).
 - Pin the versions of internal linting jobs (#21, @mbarbin).
