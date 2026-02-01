@@ -13,6 +13,13 @@ A reusable GitHub Action to download and install the [crs](https://github.com/mb
 - The `crs-version` input is required and must match a [published release](https://github.com/mbarbin/crs/releases/) of crs.
 - The action will install the `crs` binary and add it to the `PATH` for subsequent steps.
 
+## Features
+
+- Downloads the correct binary for the runner OS and architecture.
+- Verifies the binary digest (optional, see [Digest Verification](#digest-verification)).
+- Verifies the build attestation (if `gh` CLI is available).
+- Installs to a temporary directory and updates the `PATH`.
+
 ### Compatibility Note
 
 The `crs-version` input is **mandatory** and upgrading it is the responsibility of the user. Upgrades should be done carefully. We recommend making the version change in a separate pull request, and in that PR, you can add test CRs to verify that everything works as expected.
@@ -21,14 +28,7 @@ The version of this action (`setup-crs`) is tied to the version of the `crs` bin
 
 Each version of the actions defined in this repository is tested and blessed for compatibility with specific versions of `crs`. The compatibility is documented as a table in the repository root `../README.md`.
 
-## Features
-
-- Downloads the correct binary for the runner OS and architecture.
-- Verifies the binary digest (optional, see [Digest Verification](#digest-verification)).
-- Verifies the build attestation (if `gh` CLI is available).
-- Installs to a temporary directory and updates the `PATH`.
-
-## Digest Verification
+### Digest Verification
 
 You can optionally verify the integrity of the downloaded binary by providing an expected digest. If the digest does not match, the action will fail.
 
@@ -43,7 +43,7 @@ The digest format is `algorithm:hash`, where `algorithm` is currently limited to
 
 For a list of known SHA256 digests, see [DIGESTS.md](./DIGESTS.md).
 
-### See it in action
+## See it in action
 
 Find a live workflow example for this action in the [crs-actions-examples](https://github.com/mbarbin/crs-actions-examples) repository.
 
