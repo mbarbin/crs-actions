@@ -2,7 +2,7 @@
 
 ### Added
 
-- Add optional `crs-digest` input to `setup-crs` for binary integrity verification (@mbarbin).
+- Add optional `crs-digest` input to `setup-crs` for binary integrity verification (#26, @mbarbin).
 
 ## 1.0.0-alpha.9 (2026-01-17)
 
