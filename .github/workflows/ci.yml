@@ -25,4 +25,6 @@ jobs:
 
       - name: Test local test script
         run: |
-          ./setup-crs/test-install.sh 0.0.20250914
+          ./setup-crs/test-install.sh \
+            0.0.20251014 \
+            sha256:82ac2264a2b6bd6e3dc47b1ff273eebc2682efe3ad255b14eab9b001b9c1eee6

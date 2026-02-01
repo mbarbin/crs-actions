@@ -1,3 +1,9 @@
+## 1.0.0-alpha.10 (2026-02-01)
+
+### Added
+
+- Add optional `crs-digest` input to `setup-crs` for binary integrity verification (@mbarbin).
+
 ## 1.0.0-alpha.9 (2026-01-17)
 
 ### Changed
