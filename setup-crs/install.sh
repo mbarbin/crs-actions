@@ -55,7 +55,7 @@ if [ -n "${DIGEST:-}" ]; then
       ;;
   esac
   if [ "${actual_hash}" != "${expected_hash}" ]; then
-    echo "::error title=Digest mismatch::Expected ${expected_hash} but got ${actual_hash} for ${bin_name}"
+    echo "::error title=Digest mismatch::${algorithm}: expected ${expected_hash} but got ${actual_hash} for ${bin_name}"
     exit 1
   fi
   echo "Digest verified: ${algorithm}:${actual_hash}"
