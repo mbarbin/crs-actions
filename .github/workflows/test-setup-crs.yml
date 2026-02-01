@@ -6,11 +6,23 @@ on:
   pull_request:
     branches: [main]
 
+permissions:
+  contents: read
+  attestations: read
+
+defaults:
+  run:
+    shell: bash
+
 jobs:
   test-setup-crs:
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        include:
+          - os: ubuntu-latest
+            crs-digest: sha256:82ac2264a2b6bd6e3dc47b1ff273eebc2682efe3ad255b14eab9b001b9c1eee6
+          - os: macos-latest
+            crs-digest: sha256:8efd97284cdb50c3a9ea85e20b1e71678aa8da9435b09e1d3efd04a119c1484a
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
@@ -20,6 +32,29 @@ jobs:
         uses: ./setup-crs
         with:
           crs-version: 0.0.20251014
+          crs-digest: ${{ matrix.crs-digest }}
 
       - name: Check crs version
         run: crs --version
+
+  test-digest-mismatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+
+      - name: Install crs with wrong digest (should fail)
+        id: test-mismatch
+        continue-on-error: true
+        uses: ./setup-crs
+        with:
+          crs-version: 0.0.20251014
+          crs-digest: sha256:0000000000000000000000000000000000000000000000000000000000000000
+
+      - name: Verify digest mismatch was detected
+        run: |
+          if [ "${{ steps.test-mismatch.outcome }}" != "failure" ]; then
+            echo "Expected failure but got: ${{ steps.test-mismatch.outcome }}"
+            exit 1
+          fi
+          echo "Digest mismatch correctly detected"
