@@ -24,12 +24,16 @@ jobs:
           find . -type f -name '*.sh' -exec shellcheck --shell=sh --format=tty {} +
 
       - name: Test local test script (archive)
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           ./setup-crs/test-install.sh \
             0.0.20260307 \
             sha256:5097e709386d8d41351a87f86c8ad374db72aabe4ddc2a8ff2d58faebb1b889f
 
       - name: Test local test script (raw binary fallback)
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           ./setup-crs/test-install.sh \
             0.0.20251014 \
