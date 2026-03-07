@@ -7,7 +7,7 @@ A reusable GitHub Action to download and install the [crs](https://github.com/mb
 ```yaml
 - uses: mbarbin/crs-actions/setup-crs@<ref>
   with:
-    crs-version: 0.0.20250813
+    crs-version: 0.0.20260307
 ```
 
 - The `crs-version` input is required and must match a [published release](https://github.com/mbarbin/crs/releases/) of crs.
@@ -35,8 +35,8 @@ You can optionally verify the integrity of the downloaded binary by providing an
 ```yaml
 - uses: mbarbin/crs-actions/setup-crs@<ref>
   with:
-    crs-version: 0.0.20251014
-    crs-digest: sha256:82ac2264a2b6bd6e3dc47b1ff273eebc2682efe3ad255b14eab9b001b9c1eee6
+    crs-version: 0.0.20260307
+    crs-digest: sha256:5097e709386d8d41351a87f86c8ad374db72aabe4ddc2a8ff2d58faebb1b889f
 ```
 
 The digest format is `algorithm:hash`, where `algorithm` is currently limited to `sha256`. GitHub automatically provides SHA256 checksums for release assets, which you can find on the [crs releases page](https://github.com/mbarbin/crs/releases/).

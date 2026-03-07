@@ -1,3 +1,9 @@
+## 1.0.0-alpha.11
+
+### Added
+
+- Download artifacts binaries from compressed archives when available.
+
 ## 1.0.0-alpha.10 (2026-02-01)
 
 ### Added

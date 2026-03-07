@@ -6,5 +6,6 @@ Only the `linux-x86_64` platform is listed below, as it covers the most common C
 
 | Version | Platform | Digest |
 |:-------:|:--------:|:-------|
+| [0.0.20260307](https://github.com/mbarbin/crs/releases/tag/0.0.20260307) | linux-x86_64 | `sha256:5097e709386d8d41351a87f86c8ad374db72aabe4ddc2a8ff2d58faebb1b889f` |
 | [0.0.20251014](https://github.com/mbarbin/crs/releases/tag/0.0.20251014) | linux-x86_64 | `sha256:82ac2264a2b6bd6e3dc47b1ff273eebc2682efe3ad255b14eab9b001b9c1eee6` |
 | [0.0.20250914](https://github.com/mbarbin/crs/releases/tag/0.0.20250914) | linux-x86_64 | `sha256:57263671d33e90eaf91783d9b2d56c8becb130c810b3882b83cbec2ec33855fa` |
