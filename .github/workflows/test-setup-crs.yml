@@ -15,7 +15,29 @@ defaults:
     shell: bash
 
 jobs:
-  test-setup-crs:
+  test-setup-crs-archive:
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            crs-digest: sha256:5097e709386d8d41351a87f86c8ad374db72aabe4ddc2a8ff2d58faebb1b889f
+          - os: macos-latest
+            crs-digest: sha256:d32de43ce947bfda51b4546794a584790d54f440eaa7b7d49abac5329569ef77
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Install crs using setup-crs action (archive)
+        uses: ./setup-crs
+        with:
+          crs-version: 0.0.20260307
+          crs-digest: ${{ matrix.crs-digest }}
+
+      - name: Check crs version
+        run: crs --version
+
+  test-setup-crs-raw-binary:
     strategy:
       matrix:
         include:
@@ -28,7 +50,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - name: Install crs using setup-crs action
+      - name: Install crs using setup-crs action (raw binary fallback)
         uses: ./setup-crs
         with:
           crs-version: 0.0.20251014
