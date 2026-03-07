@@ -13,7 +13,7 @@ jobs:
       contents: read
     steps:
       - name: Checkout
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
       - name: Lint action.yml files with actionlint
         uses: rhysd/actionlint@03d0035246f3e81f36aed592ffb4bebf33a03106 # v1.7.7
@@ -23,7 +23,13 @@ jobs:
           sudo apt-get update && sudo apt-get install -y shellcheck
           find . -type f -name '*.sh' -exec shellcheck --shell=sh --format=tty {} +
 
-      - name: Test local test script
+      - name: Test local test script (archive)
+        run: |
+          ./setup-crs/test-install.sh \
+            0.0.20260307 \
+            sha256:5097e709386d8d41351a87f86c8ad374db72aabe4ddc2a8ff2d58faebb1b889f
+
+      - name: Test local test script (raw binary fallback)
         run: |
           ./setup-crs/test-install.sh \
             0.0.20251014 \

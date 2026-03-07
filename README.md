@@ -17,15 +17,13 @@ Reusable GitHub Actions for the [crs](https://github.com/mbarbin/crs) code revie
 
 ## Compatibility
 
-| Action Version     | CLI crs Version | Status | Note                      |
-|:------------------:|:---------------:|:------:|:--------------------------|
-| v1.0.0-alpha.8     | 0.0.20250914    | ✅     | latest, recommended       |
-| v1.0.0-alpha.8     | 0.0.20250911    | 🟢     | supported                 |
-| v1.0.0-alpha.8     | 0.0.20250813    | 🟢     | supported                 |
-| v1.0.0-alpha.8     | 0.0.20250705    | 🟡     | compatible, with warnings |
-| <= v1.0.0-alpha.7  | >= 0.0.20250813 | 🔴     | not supported             |
-| <= v1.0.0-alpha.7  | 0.0.20250705    | 🟢     | supported                 |
-| <= v1.0.0-alpha.7  | 0.0.20250626    | 🟢     | supported                 |
+| Action Version     | CLI crs Version        | Status | Note                |
+|:------------------:|:----------------------:|:------:|:--------------------|
+| v1.0.0-alpha.11    | 0.0.20260307           | ✅     | latest, recommended |
+| v1.0.0-alpha.8–11  | 0.0.20250914–20260307  | 🟢     | supported           |
+| <= v1.0.0-alpha.7  | >= 0.0.20250813        | 🔴     | not supported       |
+| v1.0.0-alpha.7     | 0.0.20250705           | 🟢     | supported           |
+| <= v1.0.0-alpha.7  | 0.0.20250626           | 🟢     | supported           |
 
 _This table will be updated as new versions are released._
 
