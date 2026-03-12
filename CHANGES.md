@@ -1,3 +1,9 @@
+## 1.0.0-alpha.12 (2026-03-12)
+
+### Changed
+
+- Upgrade `actions/github-script` dep to `v8.0.0` (#33, @mbarbin).
+
 ## 1.0.0-alpha.11 (2026-03-07)
 
 ### Added
