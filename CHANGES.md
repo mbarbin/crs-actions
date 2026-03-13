@@ -1,3 +1,9 @@
+## 1.0.0-alpha.13 (unreleased)
+
+### Changed
+
+- Internal improvements to shell validation and release process (#35, @mbarbin).
+
 ## 1.0.0-alpha.12 (2026-03-12)
 
 ### Changed
