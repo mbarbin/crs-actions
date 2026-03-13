@@ -19,8 +19,8 @@ Reusable GitHub Actions for the [crs](https://github.com/mbarbin/crs) code revie
 
 | Action Version     | CLI crs Version        | Status | Note                |
 |:------------------:|:----------------------:|:------:|:--------------------|
-| v1.0.0-alpha.12    | 0.0.20260307           | ✅     | latest, recommended |
-| v1.0.0-alpha.8–12  | 0.0.20250914–20260307  | 🟢     | supported           |
+| v1.0.0-alpha.13    | 0.0.20260307           | ✅     | latest, recommended |
+| v1.0.0-alpha.8–13  | 0.0.20250914–20260307  | 🟢     | supported           |
 | <= v1.0.0-alpha.7  | >= 0.0.20250813        | 🔴     | not supported       |
 | v1.0.0-alpha.7     | 0.0.20250705           | 🟢     | supported           |
 | <= v1.0.0-alpha.7  | 0.0.20250626           | 🟢     | supported           |
