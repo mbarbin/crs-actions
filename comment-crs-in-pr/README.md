@@ -45,7 +45,8 @@ jobs:
       - name: Install crs
         uses: mbarbin/crs-actions/setup-crs@v1.0.0
         with:
-          crs-version: 0.0.20250813
+          crs-version: 0.0.20260307
+          crs-digest: sha256:5097e709386d8d41351a87f86c8ad374db72aabe4ddc2a8ff2d58faebb1b889f
       - name: Install reviewdog
         uses: reviewdog/action-setup@d8edfce3dd5e1ec6978745e801f9c50b5ef80252 # v1.4.0
         with:
