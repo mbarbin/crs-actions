@@ -2,6 +2,7 @@
 
 ### Changed
 
+- **Breaking**: `crs-digest` input is now required in `setup-crs` for binary integrity verification (@mbarbin).
 - Internal improvements to shell validation and release process (#35, @mbarbin).
 
 ## 1.0.0-alpha.12 (2026-03-12)
