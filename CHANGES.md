@@ -2,6 +2,7 @@
 
 ### Changed
 
+- **Breaking**: Build attestation verification now requires `gh` CLI (#39, @mbarbin).
 - **Breaking**: `crs-digest` input is now required in `setup-crs` for binary integrity verification (#38, @mbarbin).
 - Internal improvements to shell validation and release process (#36, #37, @mbarbin).
 
