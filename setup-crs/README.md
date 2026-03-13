@@ -19,7 +19,7 @@ A reusable GitHub Action to download and install the [crs](https://github.com/mb
 
 - Downloads the correct binary for the runner OS and architecture.
 - Verifies the binary digest (required, see [Digest Verification](#digest-verification)).
-- Verifies the build attestation (if `gh` CLI is available).
+- Verifies the build attestation (requires `gh` CLI).
 - Installs to a temporary directory and updates the `PATH`.
 
 ### Compatibility Note
