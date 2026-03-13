@@ -72,15 +72,6 @@ See the [actions/checkout license](https://github.com/actions/checkout/blob/main
 
 ---
 
-## rhysd/actionlint
-
-- Repository: https://github.com/rhysd/actionlint
-- License: MIT License
-
-See the [actionlint license](https://github.com/rhysd/actionlint/blob/main/LICENSE) for full details.
-
----
-
 ## reviewdog/action-setup
 
 - Repository: https://github.com/reviewdog/action-setup
@@ -88,11 +79,3 @@ See the [actionlint license](https://github.com/rhysd/actionlint/blob/main/LICEN
 
 See the [reviewdog/action-setup license](https://github.com/reviewdog/action-setup/blob/main/LICENSE) for full details.
 
----
-
-## softprops/action-gh-release
-
-- Repository: https://github.com/softprops/action-gh-release
-- License: MIT License
-
-See the [action-gh-release license](https://github.com/softprops/action-gh-release/blob/master/LICENSE) for full details.
