@@ -90,7 +90,7 @@ if ! command -v gh >/dev/null 2>&1; then
   echo "Error: gh CLI is required to verify build attestation." >&2
   exit 1
 fi
-gh attestation verify "${bin_path}" --owner mbarbin --signer-repo "${REPO}"
+gh attestation verify "${bin_path}" --repo "${REPO}" 2>&1
 echo "::endgroup::"
 
 chmod +x "${bin_path}"
